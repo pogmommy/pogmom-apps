@@ -1,0 +1,35 @@
+Source: pogmom-apps
+Section: metapackages
+Priority: optional
+Maintainer: Penelope Gwen <support@pogmom.me>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.7.0
+Homepage: https://git.pogmom.me/pogmommy/pogmom-apps
+
+Package: pogmom-apps
+Architecture: all
+Depends:
+ alacritty,
+ ark,
+ armcord,
+ dolphin,
+ feh,
+ filelight,
+ floorp,
+ gimp,
+ kate,
+ kdeconnect,
+ libreoffice,
+ libreoffice-qt5,
+ mpv,
+ nextcloud-desktop,
+ partitionmanager,
+ qbittorrent,
+ syncthing-gtk,
+ thunderbird,
+ timeshift,
+ xournalpp
+Description: Recommended desktop packages
+ This metapackage includes various pieces of software to be used in a desktop environment

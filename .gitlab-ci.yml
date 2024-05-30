@@ -1,0 +1,65 @@
+# Is performed before the scripts in the stages step
+before_script:
+  - source /etc/profile
+
+# Defines stages which are to be executed
+stages:
+  - build
+  - upload
+  - release
+
+.setup_script: &setup_scripts
+  - apt-get update
+  - apt-get -y build-dep .
+  - apt-get -y install dpkg-dev
+
+.compile: &compile
+  stage: compile
+  only:
+    - tags
+  script:
+    - *setup_scripts
+    - dpkg-buildpackage -b
+    - mkdir -p ./build/{release,debug}
+    - find ../ -name "*.deb" -not -name "*dbgsym*" -exec mv {} ./build/release/ \;
+    - find ../ -name "*dbgsym*.deb" -exec mv {} ./build/debug/ \;
+  artifacts:
+    paths:
+      - build/release/*
+      - build/debug/*
+    untracked: true
+
+build:
+  <<: *compile
+  stage: build
+
+upload:
+  stage: upload
+  dependencies:
+    - build
+  only:
+    - tags
+  script:
+    - find ./build/release -name "*.deb"
+    - debs=( $( find ./build/release -name "*.deb" ) )
+    - assets=""
+    - for d in ${debs[@]};do
+    -   file=$( basename ${d} )
+    -   url="${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/${CI_PROJECT_NAME}/${CI_COMMIT_TAG}/${file}"
+    -   assets="${assets} --assets-link {\"name\":\"${file}\",\"url\":\"${url}\",\"link_type\":\"other\"} "
+    -   "curl --header \"JOB-TOKEN: $CI_JOB_TOKEN\" --upload-file \"${d}\" \"${url}\""
+    - done
+    - echo "ASSETS_ARG=${assets}" >> assets.env
+  artifacts:
+    reports:
+      dotenv: assets.env
+
+release:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  only:
+    - tags
+  script:
+    - echo "making release!"
+    - echo ${ASSETS_ARG}
+    - release-cli create --name "Release ${CI_COMMIT_TAG}" --tag-name "${CI_COMMIT_TAG}" ${ASSETS_ARG}
