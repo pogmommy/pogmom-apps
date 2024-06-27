@@ -1,3 +1,9 @@
+pogmom-apps (0.1.1) unstable; urgency=medium
+
+  * replace floorp with firefox
+
+ -- Penelope Gwen <support@pogmom.me>  Thu, 27 Jun 2024 04:20:53 -0600
+
 pogmom-apps (0.1) unstable; urgency=medium
 
   * Initial release.
