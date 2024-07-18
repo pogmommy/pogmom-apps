@@ -21,6 +21,7 @@ Depends:
  gimp,
  kate,
  kdeconnect,
+ keepassxc-full,
  libreoffice,
  libreoffice-qt5,
  mpv,
