@@ -12,25 +12,29 @@ Package: pogmom-apps
 Architecture: all
 Depends:
  alacritty,
- ark,
- armcord,
- dolphin,
+ chromium,
  feh,
  filelight,
  firefox,
  gimp,
+ inkscape,
  kate,
  kdeconnect,
  keepassxc-full,
  libreoffice,
  libreoffice-qt5,
+ lxqt-archiver,
  mpv,
  nextcloud-desktop,
+ obs-studio,
  partitionmanager,
+ pcmanfm-qt,
  qbittorrent,
+ sqlitebrowser,
  syncthing-gtk,
  thunderbird,
  timeshift,
+ virt-manager,
  xournalpp
 Description: Recommended desktop packages
  This metapackage includes various pieces of software to be used in a desktop environment
