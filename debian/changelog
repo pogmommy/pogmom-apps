@@ -1,3 +1,9 @@
+pogmom-apps (0.1.5) unstable; urgency=medium
+
+  * re-added dolphin, removed pcmanfm-qt
+
+ -- Penelope Gwen <support@pogmom.me>  Fri, 06 Dec 2024 13:43:44 -0800
+
 pogmom-apps (0.1.4) unstable; urgency=medium
 
   * added pcmanfm-qt, chromium, inkscape, obs-studio, sqlitebrowser, lxqt-archiver, virt-manager

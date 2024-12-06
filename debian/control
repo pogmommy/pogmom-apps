@@ -13,6 +13,7 @@ Architecture: all
 Depends:
  alacritty,
  chromium,
+ dolphin,
  feh,
  filelight,
  firefox,
@@ -28,7 +29,6 @@ Depends:
  nextcloud-desktop,
  obs-studio,
  partitionmanager,
- pcmanfm-qt,
  qbittorrent,
  sqlitebrowser,
  syncthing-gtk,
