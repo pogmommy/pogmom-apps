@@ -1,3 +1,10 @@
+pogmom-apps (0.2) unstable; urgency=medium
+
+  * added ufw
+  * automatically handle adding and removing ufw rules
+
+ -- Penelope Gwen <support@pogmom.me>  Tue, 10 Dec 2024 12:34:53 -0800
+
 pogmom-apps (0.1.5) unstable; urgency=medium
 
   * re-added dolphin, removed pcmanfm-qt

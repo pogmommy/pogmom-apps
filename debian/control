@@ -34,6 +34,7 @@ Depends:
  syncthing-gtk,
  thunderbird,
  timeshift,
+ ufw,
  virt-manager,
  xournalpp
 Description: Recommended desktop packages

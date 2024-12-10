@@ -1,0 +1,4 @@
+#!/bin/bash
+
+update-alternatives --remove greetd /usr/share/greetd/pogmom/config.toml
+update-alternatives --remove greetd_envs /usr/share/greetd/pogmom/environments
