@@ -1,3 +1,9 @@
+pogmom-apps (0.1.6) unstable; urgency=medium
+
+  * removed lxqt-archiver, re-added ark
+
+ -- Penelope Gwen <support@pogmom.me>  Mon, 09 Dec 2024 16:35:25 -0800
+
 pogmom-apps (0.1.5) unstable; urgency=medium
 
   * re-added dolphin, removed pcmanfm-qt

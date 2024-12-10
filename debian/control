@@ -12,6 +12,7 @@ Package: pogmom-apps
 Architecture: all
 Depends:
  alacritty,
+ ark,
  chromium,
  dolphin,
  feh,
@@ -24,7 +25,6 @@ Depends:
  keepassxc-full,
  libreoffice,
  libreoffice-qt5,
- lxqt-archiver,
  mpv,
  nextcloud-desktop,
  obs-studio,
