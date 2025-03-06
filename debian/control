@@ -1,7 +1,7 @@
 Source: pogmom-apps
 Section: metapackages
 Priority: optional
-Maintainer: Penelope Gwen <support@pogmom.me>
+Maintainer: Penelope Gwen <penelope@pogmom.me>
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
@@ -13,11 +13,10 @@ Architecture: all
 Depends:
  alacritty,
  ark,
- chromium,
  dolphin,
  feh,
  filelight,
- firefox,
+ librewolf | firefox,
  gimp,
  inkscape,
  kate,
@@ -37,5 +36,7 @@ Depends:
  ufw,
  virt-manager,
  xournalpp
+Suggests:
+ chromium
 Description: Recommended desktop packages
  This metapackage includes various pieces of software to be used in a desktop environment

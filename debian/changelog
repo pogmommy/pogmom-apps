@@ -1,3 +1,10 @@
+pogmom-apps (0.2.1) unstable; urgency=medium
+
+  * added librewolf as alternative to firefox.
+  * moved chromium to suggests
+
+ -- Penelope Gwen <penelope@pogmom.me>  Mon, 03 Mar 2025 21:21:04 +0000
+
 pogmom-apps (0.2) unstable; urgency=medium
 
   * added ufw
